@@ -1,59 +1,49 @@
-{
-    joao: {
-        nome: "João",
-        horarios: ["", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00",
+[
+    {
+        "Nome": "João",
+        "HorariosDisponiveis": ["", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00",
             "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30"],
-        agendamentos: [],
-        servicos: [
+        "Agendamentos": [],
+        "Servicos": [
             {
-                cortedecabelo: {
-                    nome: "Corte de cabelo",
-                    valor: 50
-                },
-                barba: {
-                    nome: 'Barba',
-                    valor: 30,
-                }
+                "NomeDoServico": "Corte de cabelo",
+                "ValorDoServico": 50
+            },
+            {
+                "NomeDoServico": "Barba",
+                "ValorDoServico": 30
             }
         ]
 
     },
 
-    bruno: {
-        nome: "bruno",
-        horarios: ["", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00",
+    {
+        "Nome": "Bruno",
+        "HorariosDisponiveis": ["", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00",
             "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30"],
-        agendamentos: [],
-        servicos: [
+        "Agendamentos": [],
+        "Servicos": [
             {
-                cortedecabelo: {
-                    nome: "Corte de cabelo",
-                    valor: 50
-                },
-                barba: {
-                    nome: 'Barba',
-                    valor: 30,
-                },
-                cortedecabeloebarba: {
-                    nome: "Corte de Cabelo e barba",
-                    valor: 70
-                }
+                "NomeDoServico": "Corte de cabelo",
+                "ValorDoServico": 50
+            },
+            {
+                "NomeDoServico": "Barba",
+                "ValorDoServico": 30
             }
         ]
     },
-
-    marcelo: {
-        nome: "carla",
-        horarios: ["", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00",
+    {
+        "Nome": "Carla",
+        "HorariosDisponiveis": ["", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00",
             "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30"],
-        agendamentos: [],
-        servicos: [
+        "Agendamentos": [],
+        "Servicos": [
             {
-                cortedecabelo: {
-                    nome: "Corte de cabelo",
-                    valor: 50
-                }
+                "NomeDoServico": "Corte de cabelo",
+                "ValorDoServico": 50
             }
+            
         ]
     }
-}
+]
