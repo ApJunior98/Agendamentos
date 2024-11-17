@@ -169,5 +169,4 @@ function registerUser() {
 
     // Mostra a seção de perfil com a sidebar ativa
     showSection('perfil');
-}
-*/
+}*/
