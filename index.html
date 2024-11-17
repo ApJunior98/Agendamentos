@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Agendamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Tela Inicial -->
+    <div id="inicio" class="container">
+        <h1>Bem-vindo ao Site de Agendamentos</h1>
+        <button id="botao-login">Acessar Conta</button>
+        <button id="botao-buscar-profissional-inicio">Buscar Profissionais</button>
+    </div>
+
+    <!-- Tela de Login -->
+    <div id="login" class="container" style="display: none;">
+        <h1>Login</h1>
+        <form>
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required>
+
+            <label for="login-password">Senha:</label>
+            <input type="password" id="login-password" name="password" required>
+
+            <button type="submit" id="botao-Entrar">Entrar</button>
+            <p>
+                <a href="#">Cadastrar-se</a> |
+                <a href="#">Esqueci a senha</a>
+            </p>
+        </form>
+    </div>
+
+    <!-- Tela de Cadastro -->
+    <div id="cadastro-usuario-novo" class="container" style="display: none;">
+        <h1>Cadastro de Usuário</h1>
+        <form onsubmit="event.preventDefault(); registerUser();">
+            <label for="cadastro-nome">Nome:</label>
+            <input type="text" id="cadastro-nome" name="name" required>
+
+            <label for="cadastro-telefone">Telefone:</label>
+            <input type="tel" id="cadastro-telefone" name="phone" required>
+
+            <label for="cadastro-email">Email:</label>
+            <input type="email" id="cadastro-email" name="email" required>
+
+            <label for="cadastro-senha">Senha:</label>
+            <input type="password" id="cadastro-senha" name="password" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <div class="sidebar" id="menu" style="display:none">
+        <h2>Menu</h2>
+        <ul>
+            <li><button id="botao-meu-perfil">Meu perfil</button></li>
+            <li><button id="botao-agendar">Agendamento</button></li>
+            <li><button id="botao-buscar-profissional">Busca por Profissionais</button></li>
+            <li><button id="botao-sair-conta">Sair</button></li>
+        </ul>
+    </div>
+    <div id="main-content" class="main-content" style="display:none">
+        <!-- Seção de Perfil do Usuário -->
+        <section id="perfil" style="display:none">
+            <h1>Meu Perfil</h1>
+            <p><strong>Nome:</strong> <span id="user-name">João da Silva</span></p>
+            <p><strong>Telefone:</strong> <span id="user-phone">(11) 98765-4321</span></p>
+            <p><strong>Email:</strong> <span id="user-email">joao.silva@email.com</span></p>
+        </section>
+
+        <!-- Seção de Agendamento -->
+        <section id="agendamento" style="display:none">
+            <h1>Agendamento</h1>
+            <form>
+                <div class="dropdown">
+                    <label for="time">Selecione o Serviço: </label>
+                    <button id="dropdownButton" onclick="toggleDropdown()">-</button>
+                    <div class="dropdown-content">
+                        <label><input type="checkbox" id="tratamento-especial" value="Tratamento Essencial" onclick="updateSelectedOptions()"> Tratamento Essencial</label>
+                        <label><input type="checkbox" id="tratamento-porosidade" value="Tratamento para porosidade" onclick="updateSelectedOptions()"> Tratamento para porosidade</label>
+                        <label><input type="checkbox" id="corte" value="Corte" onclick="updateSelectedOptions()"> Corte</label>
+                        <label><input type="checkbox" id="mecha-com-po" value="Mechas com pó descolorante" onclick="updateSelectedOptions()"> Mechas com pó descolorante</label>
+                        <label><input type="checkbox" id="mecha-sem-po" value="Mechas sem pó descolorante" onclick="updateSelectedOptions()"> Mechas sem pó descolorante</label>
+                        <label><input type="checkbox" id="combo1" value="Corte + Tratamento Essencial" onclick="updateSelectedOptions()"> Corte + Tratamento Essencial</label>
+                        <label><input type="checkbox" id="combo2" value="Corte + Tratamento para porosidade" onclick="updateSelectedOptions()"> Corte + Tratamento para porosidade</label>
+                        <label><input type="checkbox" id="combo3" value="Corte + Mechas com pó descolorante" onclick="updateSelectedOptions()"> Corte + Mechas com pó descolorante</label>
+                        <label><input type="checkbox" id="combo4" value="Corte + Mechas sem pó descolorante" onclick="updateSelectedOptions()"> Corte + Mechas sem pó descolorante</label>
+                    </div>
+                </div>
+            
+
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Horário:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit" class="botoes-confirmacao">Agendar</button>
+            </form>
+        </section>
+
+        <!-- Seção de Busca por Profissionais -->
+        <section id="busca" style="display:none">
+            <h1>Buscar Profissionais</h1>
+            <form>
+                <label for="specialty">Especialidade:</label>
+                <input type="text" id="specialty" name="specialty" required>
+
+                <label for="localizacao">Localização:</label>
+                <input type="text" id="localizacao" name="localizacao" required>
+
+                <button type="submit" class="botoes-confirmacao">Buscar</button>
+            </form>
+            <div id="results">
+                <!-- Resultados da busca serão exibidos aqui -->
+            </div>
+        </section>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
